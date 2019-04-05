@@ -48,7 +48,10 @@ public class Controller extends HttpServlet {
             case "/client": 
         Client client = new Client(); //Инициация объекта книги
         client.setId(2);
-        client.setName("да-да я");
+        client.setName("Дмитрий");
+        client.setSurname("Иванов");
+        client.setMoney(200);
+        client.setPhone(3724290);
         request.setAttribute("client", client); // Создание переменной book в контексте обработки jsp
         request.getRequestDispatcher("/index.jsp")
                 .forward(request, response); // Формирование ответа браузеру

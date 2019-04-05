@@ -15,14 +15,14 @@ public class Client {
     
     private String name;
     private String surname;
-    private Long money;
+    private int money;
     private int phone;
     private int id;
 
     public Client() {
     }
 
-    public Client(String name, String surname, Long money, int phone, int id) {
+    public Client(String name, String surname, int money, int phone, int id) {
         this.name = name;
         this.surname = surname;
         this.money = money;
@@ -46,11 +46,11 @@ public class Client {
         this.surname = surname;
     }
 
-    public Long getMoney() {
+    public int getMoney() {
         return money;
     }
 
-    public void setMoney(Long money) {
+    public void setMoney(int money) {
         this.money = money;
     }
 
