@@ -1,5 +1,6 @@
 package controller;
 
+import entity.Client;
 import entity.Product;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -12,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author user
  */
-@WebServlet(name = "product", urlPatterns = {
+@WebServlet(name = "Controller", urlPatterns = {
     "/product",//Шаблоны запроса, который отлавливает сервлет
-    
+    "/client",
 })
 public class Controller extends HttpServlet {
 
@@ -31,6 +32,9 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
+        String path = request.getServletPath();
+        switch (path) {
+            case "/product": 
         Product product = new Product(); //Инициация объекта книги
         product.setId(1L);
         product.setName("Колбоса");
@@ -39,6 +43,19 @@ public class Controller extends HttpServlet {
         request.setAttribute("product", product); // Создание переменной book в контексте обработки jsp
         request.getRequestDispatcher("/index.jsp")
                 .forward(request, response); // Формирование ответа браузеру
+        break;
+        
+            case "/client": 
+        Client client = new Client(); //Инициация объекта книги
+        client.setId(2);
+        client.setName("да-да я");
+        request.setAttribute("client", client); // Создание переменной book в контексте обработки jsp
+        request.getRequestDispatcher("/index.jsp")
+                .forward(request, response); // Формирование ответа браузеру
+        break;
+        }
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
