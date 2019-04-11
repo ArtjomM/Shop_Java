@@ -16,5 +16,8 @@
                 ${product}
                 ${client}
                 ${purchase}
+                
+
+                <a href="showNewShop">Новый продукт</a>
     </body>
 </html>

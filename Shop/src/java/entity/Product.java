@@ -28,6 +28,14 @@ public class Product {
         this.name = name;
     }
 
+    public Product(int i, String name, String price, String quantity) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Product(int i, String name, Integer integer, String quantity) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getPrice() {
         return price;
     }

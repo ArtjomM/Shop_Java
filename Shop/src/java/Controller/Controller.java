@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
     "/product",//Шаблоны запроса, который отлавливает сервлет
     "/client",
     "/purchase",
+    "/showNewShop",
+    "/createShop",
 })
 public class Controller extends HttpServlet {
 
@@ -68,6 +70,25 @@ public class Controller extends HttpServlet {
         request.getRequestDispatcher("/index.jsp")
                 .forward(request, response); // Формирование ответа браузеру
         break;
+        
+            case "/showNewShop":
+                request.getRequestDispatcher("/NewShop.jsp")
+                .forward(request, response); // Формирование ответа браузеру
+                
+        break;
+        
+        case "/createShop":
+               String name = request.getParameter("name");
+               String price = request.getParameter("price");
+               String quantity = request.getParameter("quantity");
+               product = new Product(1, name, price, quantity);
+               request.setAttribute("product", product); // Создание переменной book в контексте обработки jsp
+               request.getRequestDispatcher("/index.jsp")
+                    .forward(request, response); // Формирование ответа браузеру
+        
+        break;
+        
+        
         
         }
         
