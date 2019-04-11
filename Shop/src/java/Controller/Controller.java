@@ -2,6 +2,7 @@ package controller;
 
 import entity.Client;
 import entity.Product;
+import entity.Purchase;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Controller", urlPatterns = {
     "/product",//Шаблоны запроса, который отлавливает сервлет
     "/client",
+    "/purchase",
 })
 public class Controller extends HttpServlet {
 
@@ -56,6 +58,17 @@ public class Controller extends HttpServlet {
         request.getRequestDispatcher("/index.jsp")
                 .forward(request, response); // Формирование ответа браузеру
         break;
+        
+            case "/purchase": 
+        Purchase purchase = new Purchase(); //Инициация объекта книги
+        purchase.setId(3);
+        purchase.setQuantity(3);
+        purchase.setProduct("Колбаса");
+        request.setAttribute("purchase", purchase); // Создание переменной book в контексте обработки jsp
+        request.getRequestDispatcher("/index.jsp")
+                .forward(request, response); // Формирование ответа браузеру
+        break;
+        
         }
         
         
