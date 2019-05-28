@@ -11,15 +11,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Выданные Товары</title>
     </head>
+    <link rel="stylesheet" href="CSS/showListTakeProducts.css" >
     <body>
-        <h1>Список выданых товаров!</h1>
-        <ul>
+        <center>
+        <h1>Список покупок!</h1>
+        <table>
             <c:forEach var="history" items="${listHistories}">
-                <li> 
-                    Обувь: 
-                    ${history.id}, Название ${history.product.name}, Куплена: ${history.beginDate}, Имя клиента: ${history.client.surname}
-                </li>
+                   <tr><th><p style="margin-left:20px"> <b>Название:</b> ${history.product.name}, <br><b>Куплена:</b> ${history.beginDate}, <br><b>Имя клиента:</b>  ${history.client.name}, <br><b>Фамилия клиента: ${history.client.surname}</b></p></th></tr>
             </c:forEach>
-        </ul>
+        </table>
+        </center>
     </body>
 </html>

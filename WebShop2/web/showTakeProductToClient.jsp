@@ -11,8 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Выдать товар покупателю</title>
     </head>
+    <link rel="stylesheet" href="CSS/showTakeProductToClient.css">
     <body>
+        <center>
         <form action="takeProductToClient" method="POST">
+            
             Список покупателей:<br>
             <select name="clientId">
                 <c:forEach var="client" items="${listClients}">
@@ -28,5 +31,6 @@
             <input type="text" name="count" placeholder="Введите кол-во"></input><br>
             <input type="submit" value="Купить вещь">
         </form>
+        </center>
     </body>
 </html>

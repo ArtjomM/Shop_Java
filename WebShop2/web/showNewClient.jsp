@@ -10,7 +10,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <link rel="stylesheet" href="CSS/showNewClient.css">
     <body>
+        <center>
         <h1>Hello World!</h1>
         
         <form action="createClient" method="POST">
@@ -24,6 +26,6 @@
             <input type="text" name="phone"><br>
             <input type="submit" value="Create">
         </form>
-        
+        </center>
     </body>
 </html>

@@ -11,8 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Список клиентов</title>
     </head>
+    <link rel="stylesheet" href="CSS/showListClients.css">
+        </style>
     <body>
-        фыв
+        <center>
+        <h1>Наши клиенты</h1>
         <ul>
             <c:forEach var="client" items="${listClients}">
                Имя: ${client.name}<br>
@@ -21,5 +24,6 @@
                Телефон: ${client.phone}<br>
                 <br>
             </c:forEach>
+                </center>
     </body>
 </html>

@@ -11,7 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <link rel="stylesheet" href="CSS/NewProduct.css">
     <body>
+        <center>
         <h1>Hello World!</h1>
         
         <form action="createProduct" method="POST">
@@ -23,5 +25,6 @@
             <input type="text" name="quantity"><br>
             <input type="submit" value="Create">
         </form>
+        </center>
     </body>
 </html>

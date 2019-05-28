@@ -12,14 +12,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Список товара</title>
     </head>
+<link rel="stylesheet" href="CSS/showListProducts.css" >
     <body>
+        <center>
         <h1>Товары нашего магазина</h1>
-        <ul>
+        <table>
             <c:forEach var="product" items="${listProducts}">
-                Название: ${product.name}<br>
-                Цена: ${product.price}<br>
-                Количество: ${product.quantity};<br><br>
+                <tr><th><p style="margin-left:20px">
+                <b>Название:</b> ${product.name}<br>
+                <b>Цена:</b> ${product.price}<br>
+                <b>Количество:</b> ${product.quantity};</p>
+                </th></tr>
             </c:forEach>
-        </ul>    
+        </table>    
+        </center>
     </body>
 </html>
