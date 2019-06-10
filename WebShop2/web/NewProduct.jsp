@@ -4,27 +4,19 @@
     Author     : artjo
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+<title>Создание продукта</title>
     <link rel="stylesheet" href="CSS/NewProduct.css">
-    <body>
+
         <center>
-        <h1>Hello World!</h1>
-        
+        <h1>Продукт!</h1>
         <form action="createProduct" method="POST">
-            Название продукта:<br>
+            <p>Название продукта:</p>
             <input type="text" name="name">
-            <br>Цена:<br>
+            <p>Цена:</p>
             <input type="text" name="price">
-            <br>Количество:<br>
+            <p>Количество:</p>
             <input type="text" name="quantity"><br>
-            <input type="submit" value="Create">
-        </form>
+            <br><input type="submit" class="btn btn-success" value="Create">
+            
+        </form><br>
         </center>
-    </body>
-</html>

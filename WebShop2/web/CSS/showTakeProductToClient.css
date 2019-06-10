@@ -1,5 +1,8 @@
- body{
+body{
         background-color: #222830;
+        width: 20%;
+    margin-left: 40%;
+    padding-top: 100px;
         }
         h1,h2{
         color: #FFFFFF;
@@ -8,7 +11,10 @@
         p{
         color: #dddddd;
         }
-        input[type=text], select {
+        b{
+            color: white;
+        }
+/*        input[type=text], select {
             width: 15%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -29,9 +35,15 @@
         }
         input[type=submit]:hover {
             background-color: lightcoral;
-        }
+        }*/
         div {
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 20px;
         }
+        .container{
+            background-color: blue;
+            border-width: 20px; 
+            border-style: ridge;
+       }
+       

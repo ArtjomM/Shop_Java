@@ -1,6 +1,9 @@
 body{
             background-color: #222830;
             color: white;
+            padding-top: 100px;
+            width: 30%;
+            margin-left: 35%;
         }
         h1{
             color: #FFFFFF;
@@ -10,10 +13,23 @@ body{
         }
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 10%;
         }
         th, td {
             text-align: left;
             padding: 8px;
         }
         tr:nth-child(even) {background-color: #7c7c7c;}
+        div{
+    width: 40%;
+    margin-left: -10%;
+    background-color: blue;
+}
+.container{
+            background-color: blue;
+            border-width: 20px; 
+            border-style: ridge;
+       }
+        ul{
+            margin-left: 1%
+        }

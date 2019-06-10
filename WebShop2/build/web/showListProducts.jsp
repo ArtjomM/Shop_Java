@@ -16,15 +16,21 @@
     <body>
         <center>
         <h1>Товары нашего магазина</h1>
+        </center>
+          <div align="center">
         <table>
+          
             <c:forEach var="product" items="${listProducts}">
                 <tr><th><p style="margin-left:20px">
+                   
                 <b>Название:</b> ${product.name}<br>
                 <b>Цена:</b> ${product.price}<br>
                 <b>Количество:</b> ${product.quantity};</p>
+                        <a href="showProductInfo?ProductId=${product.id}">Подробная информация</a>
                 </th></tr>
-            </c:forEach>
-        </table>    
-        </center>
+            </c:forEach>              
+        </table>  
+              </div>
+
     </body>
 </html>

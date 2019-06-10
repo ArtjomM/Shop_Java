@@ -1,31 +1,19 @@
-<%-- 
-    Document   : NewClient
-    Created on : Apr 11, 2019, 9:57:43 PM
-    Author     : artjo
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
+        <title>Новый покупатель</title>
     <link rel="stylesheet" href="CSS/showNewClient.css">
-    <body>
         <center>
-        <h1>Hello World!</h1>
-        
+        <h1>Покупатель!</h1>
         <form action="createClient" method="POST">
-            Имя:<br>
+            <p>Имя:</p>
             <input type="text" name="nameClient">
-            <br>Фамалия:<br>
+            <br><p>Фамалия:</p>
             <input type="text" name="surname">
-            <br>Деньги:<br>
+            <br><p>Деньги:</p>
             <input type="text" name="money">
-            <br>Телефон<br>
+            <br><p>Телефон</p>
             <input type="text" name="phone"><br>
-            <input type="submit" value="Create">
+            <br><input type="submit" class="btn btn-success" value="Create">
         </form>
         </center>
-    </body>
-</html>
